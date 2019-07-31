@@ -132,6 +132,9 @@ class Celsius{
     this.celsius = celsius;
   }
 
+  ///i need to create a function that returns fahrenheit from celsius
+
+
   getFahrenheitTemp(){
     return this.celsius * 1.8 + 32;
   }
@@ -139,13 +142,21 @@ class Celsius{
   getKelvinTemp(){
     return this.celsius + 273;
   }
+
+  isBelowFreezing(){
+    if(this.celsius < 0){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
 
 let outsideTempt = new Celsius(10.0);
 console.log(outsideTempt.celsius);
 console.log(outsideTempt.getKelvinTemp());
 console.log(outsideTempt.getFahrenheitTemp());
-
+console.log(outsideTempt.isBelowFreezing());
 
 // c. Give `Celsius` a method called `isBelowFreezing` that
 //returns a `Bool` (true if the temperature is below freezing).
